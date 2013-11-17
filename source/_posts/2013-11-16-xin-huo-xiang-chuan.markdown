@@ -26,7 +26,7 @@ categories: life
 ![孩子的校园](http://img.blog.csdn.net/20131105221510078)
 ![教材](http://img.blog.csdn.net/20131105221200812)  
 ![义工和当地老师的合影](http://img.blog.csdn.net/20131105220512343)  
-4. 下午4点半结束全天教学
+4. 下午4点半结束全天教学  
 ![教室标识](http://img.blog.csdn.net/20131105221524828)
 5. 5点开始给参加培训的老师和义工颁发传知的证书  
 ![上课的老师们](http://img.blog.csdn.net/20131105221653234)  

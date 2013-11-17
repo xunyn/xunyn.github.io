@@ -10,7 +10,7 @@ categories: technical
 
 看到这篇文章，你已经访问到我的[octopress博客](http://xunyanan.com)了（这不是废话么），如果有想法也创建一个独立的个人博客，可以参看我创建博客的一些经验。
 
-我是站在巨人的肩头上完成[博客](www.xunyanan.com)创建的,有:
+我是站在巨人的肩头上完成[博客](http://xunyanan.com)创建的,有:
 
 *[阮一峰的搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)  
 *[唐巧的象写程序一样写博客：搭建基于github的博客](http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/)  
@@ -108,10 +108,10 @@ origin	git://github.com/imathis/octopress.git (fetch)
 origin	git://github.com/imathis/octopress.git (push)
 ```
 下面是一张我的octopress文件夹里的内容  
-![OctopressCatogery](http://xunyn.github.io/images/blog/OctopressCatogery.png)
-其中sass和source，这是我们博客的源代码文件目录
-我们需要把源代码也上传到github上，这样便可以多台机写博客了。
-_deploy是通过octopress生成的静态页面的博客文件夹，我们可以看打它的里面也有.git的文件。
+![OctopressCatogery](http://xunyn.github.io/images/blog/OctopressCatogery.png)  
+其中sass和source，这是我们博客的源代码文件目录。  
+我们需要把源代码也上传到github上，这样便可以多台机写博客了。  
+_deploy是通过octopress生成的静态页面的博客文件夹，我们可以看到它的里面也有.git的文件。  
 cd进到该目录，使用git remote -v查看
 ```
 origin	http://github.com/xunyn/xunyn.github.io (fetch)
