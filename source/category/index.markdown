@@ -8,8 +8,8 @@ footer: true
 ---
 
 * ###[技术](/blog/categories/technical):互联网、IT技术相关的博文。
-* ###[生活](/blog/categories/life):记录点滴生活，包含关于它的随笔感悟。
-* ###[读书](/blog/categories/book):它山之石，可以攻玉，好书分享。
+* ###[生活](/blog/categories/life):记录点滴生活，留下随笔感悟。
+* ###[读书](/blog/categories/book):享受阅读，分享好书。
 
 
 ##专题
