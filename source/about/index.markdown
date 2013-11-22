@@ -18,3 +18,12 @@ footer: true
 
 ##标签云
 <ul class="tag-cloud">{% tag_cloud font-size: 90-210%, limit: 1000, style: para %}</ul>
+
+##读书单
+{% if site.douban_user %}
+<section>
+<div>
+<script type="text/javascript" src="http://www.douban.com/service/badge/61284117/?selection=random&amp;picsize=medium&amp;show=dolist&amp;n=8&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=2"></script>
+</div>
+</section>
+{% endif %}

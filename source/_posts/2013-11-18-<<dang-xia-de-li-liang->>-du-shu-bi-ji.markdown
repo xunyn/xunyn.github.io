@@ -7,7 +7,7 @@ categories: book
 tag: the power of now
 ---
 [《当下的力量》](http://baike.baidu.com/view/1650183.html)是早些时候读的一本书，在脑子里留下深刻的印象。当时读完脑海中便有这样一张图片：  
-![The power of now](http://xunyn.github.io/images/blog/PowerOfNow.png)  
+![The power of now](http://xunyanan.com/images/blog/PowerOfNow.png)  
 这是本讲如何面对痛苦的书籍，但不是那种“阳光总在风雨后”、“明天就会好起来”那种所谓“温暖励志”的书籍，作者[埃克哈特·托利](http://baike.baidu.com/view/2522607.htm)本身也很传奇，有受[原始佛教](http://zh.wikipedia.org/zh-cn/原始佛教)的影响，从他的书中，能获得直面痛苦的力量。
 <!--more -->
 
