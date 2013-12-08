@@ -157,11 +157,12 @@ jiathis_share: ture
 
 ```
 
-在source/_includes/post/sharing.html添加下面的代码。
-```
-    {% if site.jiathis_share %}
-    {% include post/jiathis.html %}
-    {% endif %}
+在source/_includes/post/sharing.html添加下面的代码。  
+```  
+\#使用是去掉反斜杠掉反斜杠
+    \{\% if site.jiathis_share \%\}
+    \{\% include post/jiathis.html \%\}
+    \{\% endif \%\}
 ```
 
 #Q&A
