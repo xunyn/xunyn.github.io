@@ -3,9 +3,8 @@ layout: post
 title: "iOS进阶面试题"
 date: 2013-12-10 21:05
 comments: true
-categories: Technical
+categories: technical
 ---
-
 [OneV‘s Den](http://www.onevcat.com)在博客里出了10道iOS面试题，用他的话是:"列出了十个应聘Leader级别的高级Cocoa/CocoaTouch开发工程师所应该掌握和理解的技术" 。 
 在这里給一份我的答案。  
 </br>1. 你使用过Objective-C的运行时编程（Runtime Programming）么？如果使用过，你用它做了什么？你还能记得你所使用的相关的头文件或者某些方法的名称吗？  
