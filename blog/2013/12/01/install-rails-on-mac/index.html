@@ -1,0 +1,413 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mac上安装Rails - 寻亚楠的博客</title>
+	<meta name="author" content="寻亚楠">
+
+	
+	<meta name="description" content="rails是一套基于ruby的web开发框架。下面是在mac上安装rails的过程。 环境 Mac pro (OS X 10.9) 安装清单 Xcode(苹果开发IDE，需要其中的command line工具)
+ruby(开发语言环境) Homebrew(包管理环境，安装你需要但苹果不需要的东西 &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="寻亚楠的博客" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">
+    
+    function addBlankTargetForLinks () {
+        
+        $('a[href^="http"]').each(function(){
+                                  
+                                  $(this).attr('target', '_blank');
+                                  
+                                  });
+        
+    }
+    
+    $(document).bind('DOMNodeInserted', function(event) {
+                     
+                     addBlankTargetForLinks();
+                     
+                     });
+    
+</script>
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">寻亚楠的博客</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">首页</a></li>
+	<li><a href="/blog/archives">所有文章</a></li>
+    <li><a href="/category">分类阅读</a></li>
+
+    <li><a href="/about">关于我</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">首页</a></li>
+	<li><a href="/blog/archives">所有文章</a></li>
+    <li><a href="/category">分类阅读</a></li>
+
+    <li><a href="/about">关于我</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:xunyanan.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:xunyanan.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Mac上安装Rails</h2>
+	<div class="entry-content"><p><a href="http://rubyonrails.org">rails</a>是一套基于<a href="https://www.ruby-lang.org/zh_cn/">ruby</a>的web开发框架。下面是在mac上安装<a href="http://rubyonrails.org">rails</a>的过程。</p>
+
+<h2>环境</h2>
+
+<p>Mac pro (OS X 10.9)</p>
+
+<h2>安装清单</h2>
+
+<p><em><a href="https://developer.apple.com/xcode/">Xcode</a>(苹果开发IDE，需要其中的command line工具)<br/>
+</em><a href="https://www.ruby-lang.org/zh_cn/">ruby</a>(开发语言环境)  <br/>
+<em><a href="http://brew.sh">Homebrew</a>(包管理环境，安装你需要但苹果不需要的东西)<br/>
+</em><a href="https://rvm.io">RVM</a>(ruby版本管理，可以让你在不同的ruby版本下切换)<br/>
+*<a href="http://rubyonrails.org">rails</a>(开发框架)</p>
+
+<!--MORE -->
+
+
+<p></p>
+
+<h2>步骤</h2>
+
+<h3>首先将Xocde安装上</h3>
+
+<p>在终端中输入</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gcc -v</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+终端返回gcc版本则说明command line已经安装，若没有则可用命令</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> xcode-select --install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+安装。</p>
+
+<h3>安装git(mac已预装)</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git --version</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>安装ruby</h3>
+
+<p>在终端输入(mac已预装)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ruby -v</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+返回ruby版本，则说明mac已预装ruby环境，没有则可去官网安装。</p>
+
+<h3>安装homebrew</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装完后，检查版本</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew -v</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>安装rvm</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> \curl -L https://get.rvm.io | bash -s stable</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+安装完成后，检查版本</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm -v</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+多个ruby版本切换</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm install 1.9.3  
+</span><span class='line'>rvm use 1.9.3  
+</span><span class='line'>rvm --default 1.9.3</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h3>安装Rails</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo gem install rails -V</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+因为国内万恶的墙的问题，原本应该很顺畅的这一步，在国内就会突然恰到某个包的下载，然后就一直不动了。解决方法是，使用<a href="http://ruby.taobao.org">淘宝的镜像安装</a>(业界良心)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem sources --remove https://rubygems.org/
+</span><span class='line'>gem sources -a http://ruby.taobao.org/
+</span><span class='line'>gem sources -l</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+用这个安装完成，便可查看rails版本</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails -v</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+创建一个测试工程，检查环境是否安好</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails new hello --skip-bundle  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+加上&mdash;skip-bundle还是墙的原因，然后我们要在新建的项目中，手动的为它安装bundle。<br/>
+新建项目之后再安装bundle,进入到项目中，打开Gemfile,修改第一行：source &lsquo;<a href="https://rubygems.org">https://rubygems.org</a>&#8216;修改为：source &#8217;<a href="http://ruby.taobao.org">http://ruby.taobao.org</a>&rsquo;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundle  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+使用cd命令进入hello文件夹，尝试启动rails的server服务，看是否正常。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails server</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+如果报错：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Could not find gem 'sdoc (&gt;= 0) ruby' in the gems available on this machine.  
+</span><span class='line'>Run `bundle install` to install missing gems.  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+继续使用命令</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle install  </span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>至此，继续使用rails server命令，如果看到</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>=&gt; Booting WEBrick
+</span><span class='line'>=&gt; Rails 4.0.1 application starting in development on http://0.0.0.0:3000
+</span><span class='line'>=&gt; Run `rails server -h` for more startup options
+</span><span class='line'>=&gt; Ctrl-C to shutdown server
+</span><span class='line'>[2013-12-01 01:09:34] INFO  WEBrick 1.3.1
+</span><span class='line'>[2013-12-01 01:09:34] INFO  ruby 2.0.0 (2013-06-27) [universal.x86_64-darwin13]
+</span><span class='line'>[2013-12-01 01:09:34] INFO  WEBrick::HTTPServer#start: pid=1130 port=3000</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+说明启动成功，至此，已安装好rails的环境，步数较多，需要耐心，如果出现权限问题的提示，就在相应的命令前加sudo，来提高权限即可。</p>
+
+<h2>Q&amp;A</h2>
+
+<h3>停止rails服务（我的Mac电脑使用ctrl+c 停止后，进程依然在）</h3>
+
+<ol>
+<li>找到占用tcp 3000端口的进程</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ lsof -wni tcp:3000</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+2. 杀掉进程</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ kill -9 PID</span></code></pre></td></tr></table></div></figure>
+
+
+<p class='post-footer'>
+        原文链接:
+        <a href='http://xunyanan.com/blog/2013/12/01/install-rails-on-mac/'>http://xunyanan.com/blog/2013/12/01/install-rails-on-mac/</a><br/>
+        &nbsp;written by <a href='http://xunyanan.com'>寻亚楠</a>
+        &nbsp;posted at <a href='http://xunyanan.com'>http://xunyanan.com</a>
+        </p>
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-01T00:16:00+08:00" pubdate data-updated="true">Dec 1<span>st</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/technical/'>technical</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+    
+    
+    
+    <!-- JiaThis Button BEGIN -->
+<script type="text/javascript">
+    var jiathis_config = {data_track_clickback:'true'};
+    </script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?type=left&amp;btn=l5.gif&amp;uid=1865398" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2016
+
+    寻亚楠
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'xunyngithubio';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://xunyanan.com/blog/2013/12/01/install-rails-on-mac/';
+        var disqus_url = 'http://xunyanan.com/blog/2013/12/01/install-rails-on-mac/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-45802765-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

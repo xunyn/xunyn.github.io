@@ -1,0 +1,538 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>创建octopress博客 - 寻亚楠的博客</title>
+	<meta name="author" content="寻亚楠">
+
+	
+	<meta name="description" content="惯例，第一篇献给octopress,并感谢github创始人Tom Preston Werner，没有他放弃30W美元的年薪，便不会有github。 看到这篇文章，你已经访问到我的octopress博客了（这不是废话么），如果有想法也创建一个独立的个人博客，可以参看我创建博客的一些经验。 &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="寻亚楠的博客" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">
+    
+    function addBlankTargetForLinks () {
+        
+        $('a[href^="http"]').each(function(){
+                                  
+                                  $(this).attr('target', '_blank');
+                                  
+                                  });
+        
+    }
+    
+    $(document).bind('DOMNodeInserted', function(event) {
+                     
+                     addBlankTargetForLinks();
+                     
+                     });
+    
+</script>
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">寻亚楠的博客</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">首页</a></li>
+	<li><a href="/blog/archives">所有文章</a></li>
+    <li><a href="/category">分类阅读</a></li>
+
+    <li><a href="/about">关于我</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">首页</a></li>
+	<li><a href="/blog/archives">所有文章</a></li>
+    <li><a href="/category">分类阅读</a></li>
+
+    <li><a href="/about">关于我</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:xunyanan.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:xunyanan.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">创建octopress博客</h2>
+	<div class="entry-content"><p>惯例，第一篇献给<a href="http://octopress.org/">octopress</a>,并感谢github创始人<a href="http://tom.preston-werner.com/">Tom Preston Werner</a>，没有他<a href="http://tom.preston-werner.com/2008/10/18/how-i-turned-down-300k.html">放弃30W美元的年薪</a>，便不会有github。</p>
+
+<p>看到这篇文章，你已经访问到我的<a href="http://xunyanan.com">octopress博客</a>了（这不是废话么），如果有想法也创建一个独立的个人博客，可以参看我创建博客的一些经验。</p>
+
+<p>我是站在巨人的肩头上完成<a href="http://xunyanan.com">博客</a>创建的,有:</p>
+
+<p><em><a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">阮一峰的搭建一个免费的，无限流量的Blog&mdash;&mdash;github Pages和Jekyll入门</a><br/>
+</em><a href="http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/">唐巧的象写程序一样写博客：搭建基于github的博客</a><br/>
+*<a href="http://biaobiaoqi.me/blog/2013/03/21/building-octopress-in-github-mac/">biaobiaoqi的在github上
+搭建octopress博客 Mac版</a></p>
+
+<p>首先，你要有一台可以上网的电脑,（又是废话，正用着呢，<a href="http://www.comp-on.org">点这发现自己的幸运</a>）。然后了解你的电脑，要知道操作系统版本等(最好有用一种语言写过代码的经历)，博主用的是Mac电脑，windows和linux的同学不建议参考本文。</p>
+
+<p>网上有很有搭环境的博文，但建议看<a href="http://octopress.org/docs/setup/">官网的步骤</a>，因为Octopress一直在更新，很多网上的博文都是旧版本的搭建步骤，耽误事。</p>
+
+<!-- more -->
+
+
+<h1>搭建环境</h1>
+
+<h2>工欲善其事，必先利其器:</h2>
+
+<ol>
+<li>Github（官网下载，后面新建项目用）
+下载地址：<a href="https://help.github.com/articles/set-up-git">https://help.github.com/articles/set-up-git</a></li>
+<li>iTerm2（可替代mac终端的，比较强大）
+下载地址：<a href="http://www.iterm2.com/#/section/home">http://www.iterm2.com/#/section/home</a></li>
+<li>ruby 安装包 （下载 ruby-1.9.3-p362.tar.gz 这个）
+下载地址：<a href="http://ruby.taobao.org/mirrors/ruby/">http://ruby.taobao.org/mirrors/ruby/</a></li>
+<li>Mou （Markdown编辑软件，这个强，可用于后期发布博客文章）
+下载地址：<a href="http://mouapp.com/">http://mouapp.com/</a></li>
+<li>Xcode（它将帮你安装好 Unix 环境需要的开发包）
+下载地址：官网或百度吧，比较大⋯⋯</li>
+</ol>
+
+
+<p>让子弹飞一会，这些都是后面要用到的工具软件，先去下载,不要安装。<br/>
+这时候，忽略一个问题，就是每个人的Mac电脑是不一样的，最大的不同是操作系统版本，我的OS系统是Version 10.9，巨人们的写博客时，还没有出呢，可能你的Mac是更新的电脑，所以要想好如何check这些。</p>
+
+<h2>想想我们要做什么</h2>
+
+<p>看官网的步骤之前，需要有点大致的概念，这样能帮助更快的理解。</p>
+
+<p>1 假设我们需要自己搭建一个独立博客网站，需要什么？首先要有台连接到英特网服务器，要有前端的页面，要后端的数据库，要有域名等。
+2 github可以提供给我们的是，github一个免费的代码托管仓库，它支持用户html页面的显示，也就是用户可以上传HTML文件，然后在远程像访问网页一样访问它。
+3 按照我们的设想1，我们这时候还缺网站的后台，数据库这些，github并不提供这些，数据库的作用是提高管理能力，对于个人博客这种数据规模很小，便可返璞归真，用回静态页面。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>对于计算机和一切能被用来改造这个世界的事物的使用都不应受到任何限制，
+</span><span class='line'>任何试图隐藏系统的复杂性的行为都只会得到一个更为复杂的系统。</span></code></pre></td></tr></table></div></figure>
+
+
+<p>4 静态页面用起来很复杂，我们需要Octopress这样的引擎来帮我们干“重活”，我们可以关注于自己博客中的内容，用过HTML的都知道，内容需要写<html></html>的标记，我们要把这些工作也简化，便有了Markdown，我们使用Markdown来描述我们的内容，然后由引擎“翻译”为HTML页面。</p>
+
+<h2>现在需要什么环境</h2>
+
+<ol>
+<li>既然要托管到github，那么便要有github的环境.
+check本机的git环境，在命令行输入</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git --version</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Octopress是基于Jekyll的，需要ruby的环境编译。
+check ruby</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ruby -v</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ruby的version 1.9.3以上，新版的Mac，这些都是有装的。
+3. gcc和make，ruby的环境需要gcc，这个我们通过安装xcode的command line tool来完成安装
+check gcc</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gcc -v</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>跟着官方文档设置Octopress</h2>
+
+<p>Setup Octopress</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next, install dependencies.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler
+</span><span class='line'>rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
+</span><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Install the default Octopress theme.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>建立username.github.io的gibhub page</h2>
+
+<p>看到这里，你应该在啃官方的文档，这个很重要，需要继续啃，里面的步骤我就不再翻译了。</p>
+
+<p>这需要花费一些时间，因为全是新知识，不要怕放弃。</p>
+
+<p>继续努力，直到在浏览器中，输入username.github.io，可以看到自己的页面</p>
+
+<h1>个性化定制</h1>
+
+<p>看到了自己的页面，是不是很兴奋，先别开香槟，接着还有任务。</p>
+
+<h2>git相关的命令</h2>
+
+<p>git是一个Linux开发的版本控制工具，它svn不同的是，它是分布式的，可以不用常联server。对于学习git，推荐的还是<a href="http://gitref.org">官方文档</a>,（<a href="http://gitbook.liuhui998.com/7_3.html">中文版</a>）。
+还记得，安装Octopress的第一步操作么？</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我们从github克隆了一份octopress的代码到本地。这时候相当于在本地有了一份octopess的代码库，使用</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote -v</span></code></pre></td></tr></table></div></figure>
+
+
+<p>会看到远程代码仓库的配置信息</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>origin   git://github.com/imathis/octopress.git (fetch)
+</span><span class='line'>origin    git://github.com/imathis/octopress.git (push)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>下面是一张我的octopress文件夹里的内容<br/>
+<img src="http://xunyn.github.io/images/blog/OctopressCatogery.png" alt="OctopressCatogery" /><br/>
+其中sass和source，这是我们博客的源代码文件目录。<br/>
+我们需要把源代码也上传到github上，这样便可以多台机写博客了。<br/>
+_deploy是通过octopress生成的静态页面的博客文件夹，我们可以看到它的里面也有.git的文件。<br/>
+cd进到该目录，使用git remote -v查看</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>origin   http://github.com/xunyn/xunyn.github.io (fetch)
+</span><span class='line'>origin    http://github.com/xunyn/xunyn.github.io (push)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>它会在我们使用rake deploy时自动push到我们的路径下。这时候我们不需要在自已去push。但是博客源代码是需要我们自己push到github的server的.</p>
+
+<h4>使用多台电脑的同时写博客</h4>
+
+<p>需要先拿把source code拿下来</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git pull origin source</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后在更改了source后，check in更新，将本地source update github的代码仓库上</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
+</span><span class='line'>git commit -m 'your message'
+</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>个性化设置自己的博客</h2>
+
+<p>个性化设置这块，参考了<a href="http://biaobiaoqi.me/blog/2013/07/10/decorate-octopress/">biaobiaoqi的定制Octopress</a>,
+*安装第三方主题</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd octopress$ git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash$ rake install['slash’] </span></code></pre></td></tr></table></div></figure>
+
+
+<p>*添加评论
+Disqus</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Disqus Comments
+</span><span class='line'>disqus_short_name:xunyngithubio
+</span><span class='line'>disqus_show_comment_count:false</span></code></pre></td></tr></table></div></figure>
+
+
+<p>*添加分享
+注册加网后，从加网获得模板
+在post下创建jiathis.html
+将加网的模板，拷贝到jiathis.html
+在_config.xml创建新的标记</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># share
+</span><span class='line'>jiathis_share: ture
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在source/_includes/post/sharing.html添加下面的代码。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\#使用是去掉反斜杠掉反斜杠
+</span><span class='line'>    \{\% if site.jiathis_share \%\}
+</span><span class='line'>    \{\% include post/jiathis.html \%\}
+</span><span class='line'>    \{\% endif \%\}</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Q&amp;A</h1>
+
+<p>1.Xcode 5 command line 未安装解决方法</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>xuns-MacBook-Pro:~ xunyanan$ xcode-select --install
+</span><span class='line'>xcode-select: note: install requested for command line developer tools
+</span><span class='line'>xuns-MacBook-Pro:~ xunyanan$ </span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.无权限问题解决方法
+使用sudo
+sudo gem install bundler
+sudo bundle install</p>
+
+<p>3.bundle install安装成功的log,这个需要网络访问，要等较长时间。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>xuns-MacBook-Pro:octopress1 xunyanan$ sudo bundle install
+</span><span class='line'>Password:
+</span><span class='line'>Fetching gem metadata from https://rubygems.org/.......
+</span><span class='line'>Fetching gem metadata from https://rubygems.org/..
+</span><span class='line'>Using rake (0.9.2.2)
+</span><span class='line'>Using RedCloth (4.2.9)
+</span><span class='line'>Using chunky_png (1.2.5)
+</span><span class='line'>Using fast-stemmer (1.0.1)
+</span><span class='line'>Using classifier (1.3.3)
+</span><span class='line'>Using fssm (0.2.9)
+</span><span class='line'>Using sass (3.2.9)
+</span><span class='line'>Using compass (0.12.2)
+</span><span class='line'>Installing directory_watcher (1.4.1)
+</span><span class='line'>Installing haml (3.1.7)
+</span><span class='line'>Installing kramdown (0.13.8)
+</span><span class='line'>Installing liquid (2.3.0)
+</span><span class='line'>Installing syntax (1.0.0)
+</span><span class='line'>Installing maruku (0.6.1)
+</span><span class='line'>Installing posix-spawn (0.3.6)
+</span><span class='line'>Installing yajl-ruby (1.1.0)
+</span><span class='line'>Installing pygments.rb (0.3.4)
+</span><span class='line'>Installing jekyll (0.12.0)
+</span><span class='line'>Installing rack (1.5.2)
+</span><span class='line'>Installing rack-protection (1.5.0)
+</span><span class='line'>Installing rb-fsevent (0.9.1)
+</span><span class='line'>Installing rdiscount (2.0.7.3)
+</span><span class='line'>Installing rubypants (0.2.0)
+</span><span class='line'>Installing sass-globbing (1.0.0)
+</span><span class='line'>Installing tilt (1.3.7)
+</span><span class='line'>Installing sinatra (1.4.2)
+</span><span class='line'>Installing stringex (1.4.0)
+</span><span class='line'>Using bundler (1.3.5)
+</span><span class='line'>Your bundle is complete!
+</span><span class='line'>Use `bundle show [gemname]` to see where a bundled gem is installed. </span></code></pre></td></tr></table></div></figure>
+
+
+<p>出现绿色的两行，说明安装成功。<br/>
+4.git clone some branch</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/xunyn/xunyn.github.io -b 'source' temp </span></code></pre></td></tr></table></div></figure>
+
+
+<p>remember  brach name use ‘&#8217;</p>
+
+<p>5.rake preview的使用
+我的Mac机开启preview功能时，使用Chrome访问<a href="http://localhost:4000">localhost:4000</a>可以正常预览,使用Safari不行，具体原因还不知道。其次，preview支持页面改动预览，也就是可以边写边看效果，但开启preview功能前，一定要确保浏览器为占用4000的端口，否则会无法使用preview功能，好的方法是预览完，随手关闭页面。</p>
+
+<p class='post-footer'>
+        原文链接:
+        <a href='http://xunyanan.com/blog/2013/11/16/build-octopress-blog/'>http://xunyanan.com/blog/2013/11/16/build-octopress-blog/</a><br/>
+        &nbsp;written by <a href='http://xunyanan.com'>寻亚楠</a>
+        &nbsp;posted at <a href='http://xunyanan.com'>http://xunyanan.com</a>
+        </p>
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-16T15:24:00+08:00" pubdate data-updated="true">Nov 16<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/technical/'>technical</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+    
+    
+    
+    <!-- JiaThis Button BEGIN -->
+<script type="text/javascript">
+    var jiathis_config = {data_track_clickback:'true'};
+    </script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?type=left&amp;btn=l5.gif&amp;uid=1865398" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2016
+
+    寻亚楠
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'xunyngithubio';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://xunyanan.com/blog/2013/11/16/build-octopress-blog/';
+        var disqus_url = 'http://xunyanan.com/blog/2013/11/16/build-octopress-blog/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-45802765-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

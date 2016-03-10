@@ -1,0 +1,429 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>制做自己的马赛克微信头像 - 寻亚楠的博客</title>
+	<meta name="author" content="寻亚楠">
+
+	
+	<meta name="description" content="想法 2013年接近尾声了，有的媒体会用马赛克的方式，把一年中的大事件汇集到一张图片上。印象中天才少年Matrix67曾使用Mathematica制作过自己马赛克头像，于是便有了用微信朋友圈里的图片来制作一个自己的微信头像。 觉得不像我，可以离开座位，退后一点，离显示器远点看这张图片。 动手 &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="寻亚楠的博客" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">
+    
+    function addBlankTargetForLinks () {
+        
+        $('a[href^="http"]').each(function(){
+                                  
+                                  $(this).attr('target', '_blank');
+                                  
+                                  });
+        
+    }
+    
+    $(document).bind('DOMNodeInserted', function(event) {
+                     
+                     addBlankTargetForLinks();
+                     
+                     });
+    
+</script>
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">寻亚楠的博客</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">首页</a></li>
+	<li><a href="/blog/archives">所有文章</a></li>
+    <li><a href="/category">分类阅读</a></li>
+
+    <li><a href="/about">关于我</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">首页</a></li>
+	<li><a href="/blog/archives">所有文章</a></li>
+    <li><a href="/category">分类阅读</a></li>
+
+    <li><a href="/about">关于我</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:xunyanan.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:xunyanan.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">制做自己的马赛克微信头像</h2>
+	<div class="entry-content"><h2>想法</h2>
+
+<p>2013年接近尾声了，有的媒体会用马赛克的方式，把一年中的大事件汇集到一张图片上。印象中天才少年<a href="http://www.matrix67.com/">Matrix67</a>曾使用<a href="http://zh.wikipedia.org/zh-cn/Mathematica">Mathematica</a>制作过自己马赛克头像，于是便有了用微信朋友圈里的图片来制作一个自己的微信头像。<br/>
+<img src="http://xunyanan.com/images/blog/mosaic_me_2011.jpg" alt="马赛克头像" /><br/>
+觉得不像我，可以离开座位，退后一点，离显示器远点看这张图片。</p>
+
+<!--more-->
+
+
+<p></p>
+
+<h2>动手</h2>
+
+<p>使用到的工具：<br/>
+<em>Mac(os x 10.9)电脑(windows也可以做，替换相应的工具即可)<br/>
+</em><a href="http://www.wolfram.com/mathematica/">Mathematica 9.0</a><br/>
+<em><a href="http://www.google.cn/intl/zh-CN/chrome/">Chrome</a> and <a href="https://chrome.google.com/webstore/detail/bulk-download-imageszig/gfjhimhkjmipphnaminnnnjpnlneeplk">batch image download</a><br/>
+</em>Preview and <a href="http://ifunapple.com/2013/07/a-better-finder-rename-9/">A better finder rename</a></p>
+
+<h3>筹集素材</h3>
+
+<p>制作马赛克头像的第一步是什么？要有足够的马赛克（心中无码可跳过），脑子的想法便是微信朋友的头像，有足够的好友数量，便有很多素材，这些素材，还是有统一尺寸的。要获得这些素材，有几个方法。</p>
+
+<h4>从手机中获得素材</h4>
+
+<p>从手机将微信App导出，从中找到头像文件夹。这是第一想法，没试成，用的iPhone手机，升了iOS7.0，越不了狱，看不到微信的文件夹。android的童鞋可以试下，但有可能腾讯没把素材按JPEG放到文件，可能放到SQLite里，这样的话，这个方法就用不了了。</p>
+
+<h4>从微信网站下载素材</h4>
+
+<p><a href="https://wx.qq.com">微信新推出了网页版</a>，可以做的事情就多了一些。<a href="(https://wx.qq.com">打开微信网页版后</a>),用手机扫描二维码登陆后，可以看到微信网页版的聊天界面，看到朋友们的信息。在这里我走个小弯路（点击跳过此段内容），这个弯路是用<a href="http://www.w3school.com.cn/js/">Javascript</a>和<a href="http://nodejs.org/">nodejs</a>来完成从网站扒朋友头像的任务。</p>
+
+<h5>JS获得头像url代码</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">a</span> <span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">images</span><span class="p">;</span> <span class="k">for</span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="k">if</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;hide_src&quot;</span><span class="p">)){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;hide_src&quot;</span><span class="p">))}</span> <span class="p">}</span> <span class="p">}</span> <span class="nx">a</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>使用nodejs的request下载素材到本地文件</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Dependencies </span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">exec</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;child_process&#39;</span><span class="p">).</span><span class="nx">exec</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">spawn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;child_process&#39;</span><span class="p">).</span><span class="nx">spawn</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// App variables </span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">file_url</span> <span class="o">=</span> <span class="s1">&#39;http://xunyanan.com/images/blog/PowerOfNow.png&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">DOWNLOAD_DIR</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// We will be downloading the files to a directory, so make sure it&#39;s there </span>
+</span><span class='line'><span class="c1">// This step is not required if you have manually created the directory </span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">mkdir</span> <span class="o">=</span> <span class="s1">&#39;mkdir -p &#39;</span> <span class="o">+</span> <span class="nx">DOWNLOAD_DIR</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">child</span> <span class="o">=</span> <span class="nx">exec</span><span class="p">(</span><span class="nx">mkdir</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stdout</span><span class="p">,</span> <span class="nx">stderr</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">else</span> <span class="nx">download_file_httpget</span><span class="p">(</span><span class="nx">file_url</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'><span class="c1">// Function to download file using HTTP.get </span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">download_file_httpget</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">file_url</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">host</span><span class="o">:</span> <span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">file_url</span><span class="p">).</span><span class="nx">host</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">port</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">path</span><span class="o">:</span> <span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">file_url</span><span class="p">).</span><span class="nx">pathname</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">file_name</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">file_url</span><span class="p">).</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">).</span><span class="nx">pop</span><span class="p">();</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="nx">DOWNLOAD_DIR</span> <span class="o">+</span> <span class="nx">file_name</span><span class="p">);</span>
+</span><span class='line'><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">);</span>
+</span><span class='line'>         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">file</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">file</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</span><span class='line'>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">file_name</span> <span class="o">+</span> <span class="s1">&#39; downloaded to &#39;</span> <span class="o">+</span> <span class="nx">DOWNLOAD_DIR</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>一切准备妥当，发现微信的链接是https的，直接用url是新建http连接是获得不了东西的。这就和泡好了方便面，发现没配叉子一样。就换了条其他的路，放代码出来，大家可以研究下，如何用脚本建立上https的请求，毕竟脚本的方法能控制更多东西。</h5>
+
+<h4>新的道路，使用<a href="http://www.google.cn/intl/zh-CN/chrome/">Chrome</a> and <a href="https://chrome.google.com/webstore/detail/bulk-download-imageszig/gfjhimhkjmipphnaminnnnjpnlneeplk">batch image download</a>插件</h4>
+
+<p>如果去年抢过火车票，那估计电脑里都还有Chrome，<a href="https://chrome.google.com/webstore/detail/bulk-download-imageszig/gfjhimhkjmipphnaminnnnjpnlneeplk">batch image download</a>比较好用，安装完成后便在右键菜单中可以看到。就是要注意，要先把朋友列表拖动一下，让所有的朋友头像都在网页上刷新出来，这样才可以下载全部的。</p>
+
+<h3>整理素材</h3>
+
+<p>现在有了几百张朋友的头像，Mathematica需要的是统一尺寸的正方形jpg图像，大概每张图片的像素在20*20~~40*40之间,要先整理一下图片。</p>
+
+<h4>首先删除不是正方形的图像</h4>
+
+<p>里面会有群组的头像，这个也可以选择删掉</p>
+
+<h4>重命名整理图片（可跳过）</h4>
+
+<ol>
+<li>使用shell 命令批量重名</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">j</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span><span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="o">*</span><span class="p">;</span><span class="k">do</span> <span class="kd">let</span> <span class="nx">j</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span><span class="nx">mv</span> <span class="s2">&quot;$i&quot;</span> <span class="s2">&quot;${i%.*}$j.jpg&quot;</span><span class="p">;</span><span class="nx">done</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>使用<a href="http://ifunapple.com/2013/07/a-better-finder-rename-9/">A better finder rename</a></li>
+</ol>
+
+
+<h4>将132*132的头像图片像素变小</h4>
+
+<p>推荐使用Mac自带的<a href="http://zh.wikipedia.org/zh-cn/Automator">atuomator</a>做这项任务，通过鼠标拖动，就能安排这个小机器人给你干活，是见很有意思的事情。对于<a href="http://www.macx.cn/thread-2030978-1-1.html">自定义缩放图像</a>这里有一份详细的教程。<br/>
+在脑海中先好要让机器人做什么，比如第一步先把图片拷贝到每个目录，然后在把这些图像尺寸缩小。编辑好flow后，保存好后，便可以通过右键看到自己命名的操作，然后选中文件操作。用完之后，如果不想右键点击后，还出现自定义的操作，可以在automator删除services工作流，进到目录[username]/Library/Services下删除对应名字的workflow，就可以了。</p>
+
+<h4>制作黑白素材</h4>
+
+<p>将所有的头像图片，制作一份黑白素材，放在一起组成新的图像库。从Mathematica生成马赛克图片的上说，素材图库中图片越多，然后有黑白色图片低对比度图片，生成出来的头像，会效果更好。每一个素材库的图片都会是当一个像素去对应到最终生成的头像图片上。制作黑白素材的方法有三种方法：<br/>
+1. automator小机器人可以做<br/>
+2. 使用priview调节饱和度(Saturation)<br/>
+3. 使用photoshop调节颜色通道
+效果上从上到下越来越好，功夫上也是从上到下越费越多。建议第二种。</p>
+
+<h3>制作图片</h3>
+
+<p>制作马赛克图片我们用的是<a href="http://www.wolfram.com/mathematica/">Mathematica 9.0</a> (<a href="http://www.bjt.name/2011/06/mosaic-plot-with-r/">用R语言的看这里</a>)。先看看下这经典的三行代码，向<a href="http://blog.wolfram.com/2008/05/02/%0Amaking-photo-mosaics/">Theodore Gray</a>致敬。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">imagePool</span> <span class="o">=</span> <span class="nx">Map</span><span class="p">[</span><span class="nx">With</span><span class="p">[{</span><span class="nx">i</span> <span class="o">=</span> <span class="nx">Import</span><span class="p">[</span><span class="err">#</span><span class="p">]},</span> <span class="p">{</span><span class="nx">i</span><span class="p">,</span> <span class="nx">N</span><span class="err">@</span><span class="nx">Mean</span><span class="p">[</span><span class="nx">Flatten</span><span class="p">[</span><span class="nx">ImageData</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="mi">1</span><span class="p">]]}]</span> <span class="o">&amp;</span><span class="p">,</span>
+</span><span class='line'>   <span class="nx">FileNames</span><span class="p">[</span><span class="s2">&quot;/Users/xunyanan/Desktop/webwx_img/*.jpg&quot;</span><span class="p">]];</span>
+</span><span class='line'><span class="nx">closeMatch</span><span class="p">[</span><span class="nx">c_</span><span class="p">]</span> <span class="o">:=</span>
+</span><span class='line'> <span class="nx">RandomChoice</span><span class="p">[</span><span class="nx">Nearest</span><span class="p">[</span><span class="nx">imagePool</span><span class="p">[[</span><span class="nx">All</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span> <span class="o">-&gt;</span> <span class="nx">imagePool</span><span class="p">[[</span><span class="nx">All</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="nx">c</span><span class="p">,</span> <span class="mi">20</span><span class="p">]]</span>
+</span><span class='line'><span class="nx">ImageAssemble</span><span class="p">[</span>
+</span><span class='line'> <span class="nx">Map</span><span class="p">[</span><span class="nx">closeMatch</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">ImageData</span><span class="p">[</span><span class="nx">Import</span><span class="p">[</span><span class="s2">&quot;/Users/xunyanan/Desktop/2011me.tiff&quot;</span><span class="p">]],</span> <span class="p">{</span><span class="mi">2</span><span class="p">}]]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+第一行就是把建立了一个制定路径的图像库;第二行写了个匹配函数，函数的内容是找出最接近的20个图片，并随机选择;第三行是导入目标图片，并调用函数closeMatch生成图像结果。</p>
+
+<h4>目标图片tiff格式的头像照片</h4>
+
+<p>找一张自己的头像图片，然后把它处理成20*20像素的tiff格式(<strong>注意在保存tiff格式时，一定不要勾选Alpha通道</strong>)。如果选择像素大于20的图片，生成时间会长一些。</p>
+
+<h4>生成马赛克头像</h4>
+
+<p>在<a href="http://www.wolfram.com/mathematica/">Mathematica 9.0</a> 新建note book，然后，将三行代码拷入其中，并把路径改成自己的文件位置。右键选择Evaluation cell，便可看到结果。</p>
+
+<h2>分享到微信朋友圈</h2>
+
+<p>可以用<a href="http://open.weixin.qq.com/intro/">微信的开放平台</a>把自己的头像分享回微信。我的<a href="http://xunyanan.com/blog/2013/11/16/build-octopress-blog/">个人博客网站</a>用的的是加网分享，点击分享，扫描二维码即可完成。</p>
+
+<h3>在个人博客网站添加加网的方法是</h3>
+
+<h4>注册加网后，获得加网生成的js</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- JiaThis Button BEGIN --&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">jiathis_config</span> <span class="o">=</span> <span class="p">{</span><span class="nx">data_track_clickback</span><span class="o">:</span><span class="s1">&#39;true&#39;</span><span class="p">};</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;[your url]&quot;</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="c">&lt;!-- JiaThis Button END —&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>将此段代码添加到个人网站中，<a href="http://xunyanan.com/blog/2013/11/16/build-octopress-blog/">详见这篇</a>。</p>
+
+<p class='post-footer'>
+        原文链接:
+        <a href='http://xunyanan.com/blog/2013/11/26/mosaic-photo-and-share-moment/'>http://xunyanan.com/blog/2013/11/26/mosaic-photo-and-share-moment/</a><br/>
+        &nbsp;written by <a href='http://xunyanan.com'>寻亚楠</a>
+        &nbsp;posted at <a href='http://xunyanan.com'>http://xunyanan.com</a>
+        </p>
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-26T22:49:00+08:00" pubdate data-updated="true">Nov 26<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/technical/'>technical</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+    
+    
+    
+    <!-- JiaThis Button BEGIN -->
+<script type="text/javascript">
+    var jiathis_config = {data_track_clickback:'true'};
+    </script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?type=left&amp;btn=l5.gif&amp;uid=1865398" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2016
+
+    寻亚楠
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'xunyngithubio';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://xunyanan.com/blog/2013/11/26/mosaic-photo-and-share-moment/';
+        var disqus_url = 'http://xunyanan.com/blog/2013/11/26/mosaic-photo-and-share-moment/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-45802765-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>
