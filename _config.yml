@@ -88,15 +88,19 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user:
-delicious_count: 3
+#delicious_user:
+#delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: xunyngithubio
-disqus_show_comment_count: false
+#disqus_short_name: xunyngithubio
+#disqus_show_comment_count: false
+
+# duoshuo comments
+duoshuo_comments: true
+duoshuo_short_name: xunyn
 
 # Google Analytics
-google_analytics_tracking_id: UA-45802765-1
+#google_analytics_tracking_id: UA-45802765-1
 
 # Facebook Like
 facebook_like: false
